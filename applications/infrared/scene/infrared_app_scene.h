@@ -310,7 +310,7 @@ public:
 
     /** Constructor
      * Specifies path to brute force db library */
-    InfraredAppSceneUniversalTV()
+    InfraredAppSceneUniversalBIG()
         : InfraredAppSceneUniversalCommon("/ext/infrared/assets/big.ir") {
     }
 

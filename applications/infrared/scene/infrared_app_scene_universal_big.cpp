@@ -4,7 +4,7 @@
 #include "infrared/scene/infrared_app_scene.h"
 #include "infrared/infrared_app.h"
 
-void InfraredAppSceneUniversalTV::on_enter(InfraredApp* app) {
+void InfraredAppSceneUniversalBIG::on_enter(InfraredApp* app) {
     InfraredAppViewManager* view_manager = app->get_view_manager();
     ButtonPanel* button_panel = view_manager->get_button_panel();
     button_panel_reserve(button_panel, 2, 3);
@@ -22,6 +22,10 @@ void InfraredAppSceneUniversalTV::on_enter(InfraredApp* app) {
         infrared_app_item_callback,
         app);
     brute_force.add_record(i, "POWER");
+    ++i;
+    brute_force.add_record(i, "ON");
+    ++i;
+    brute_force.add_record(i, "OFF");
     ++i;
     button_panel_add_item(
         button_panel,
@@ -88,7 +92,7 @@ void InfraredAppSceneUniversalTV::on_enter(InfraredApp* app) {
         app);
     brute_force.add_record(i, "CH-");
 
-    button_panel_add_label(button_panel, 6, 11, FontPrimary, "TV remote");
+    button_panel_add_label(button_panel, 6, 11, FontPrimary, "Universal");
     button_panel_add_label(button_panel, 9, 64, FontSecondary, "Vol");
     button_panel_add_label(button_panel, 43, 64, FontSecondary, "Ch");
 

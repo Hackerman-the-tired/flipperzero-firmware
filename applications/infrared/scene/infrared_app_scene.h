@@ -303,3 +303,18 @@ public:
     ~InfraredAppSceneUniversalTV() {
     }
 };
+class InfraredAppSceneUniversalBIG : public InfraredAppSceneUniversalCommon {
+public:
+    /** Called when enter scene */
+    void on_enter(InfraredApp* app) final;
+
+    /** Constructor
+     * Specifies path to brute force db library */
+    InfraredAppSceneUniversalTV()
+        : InfraredAppSceneUniversalCommon("/ext/infrared/assets/big.ir") {
+    }
+
+    /** Destructor */
+    ~InfraredAppSceneUniversalBIG() {
+    }
+};

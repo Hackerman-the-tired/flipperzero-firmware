@@ -4,7 +4,7 @@
 #include "infrared/scene/infrared_app_scene.h"
 #include "infrared/infrared_app.h"
 
-void InfraredAppSceneUniversalBIG::on_enter(InfraredApp* app) {
+void InfraredAppSceneUniversalTV::on_enter(InfraredApp* app) {
     InfraredAppViewManager* view_manager = app->get_view_manager();
     ButtonPanel* button_panel = view_manager->get_button_panel();
     button_panel_reserve(button_panel, 2, 3);
